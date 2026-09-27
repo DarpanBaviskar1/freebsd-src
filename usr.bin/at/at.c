@@ -70,7 +70,7 @@
 
 /* Macros */
 
-#ifndef ATJOB_DIR 
+#ifndef ATJOB_DIR
 #define ATJOB_DIR "/usr/spool/atjobs/"
 #endif
 
@@ -122,7 +122,7 @@ static long *get_job_list(int, char *[], int *);
 
 static void sigc(int signo __unused)
 {
-/* If the user presses ^C, remove the spool file and exit 
+/* If the user presses ^C, remove the spool file and exit
  */
     if (fcreated)
     {
@@ -169,7 +169,7 @@ static char *cwdname(void)
 	
 	if (errno != ERANGE)
 	    perr("cannot get directory");
-	
+
 	free (ptr);
 	size += SIZE;
 	if ((ptr = malloc(size)) == NULL)
